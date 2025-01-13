@@ -38,31 +38,34 @@ This script showcases the following:
 
 ```bash
   node index.js
+```
 3. The output will show:
 
 Encrypted message (in hexadecimal format).
 Decrypted message (the original plaintext).
-Code Explanation
-Hashing Example (Commented Out)
+
+## **Code Explanation**
+**Hashing Example (Commented Out)**
 javascript
-Copy code
+```Javascript
 const hash = crypto.createHash('sha256');
 hash.update('password123');
 console.log(hash.digest('hex'));
-This code hashes the string password123 using SHA-256 and outputs the hash in hexadecimal format.
+```
+This code hashes the string `password123` using SHA-256 and outputs the hash in hexadecimal format.
 
-Generate Random Bytes
-javascript
+**Generate Random Bytes**
+```Javascript
 Copy code
 crypto.randomBytes(16, (err, buf) => {
   if (err) throw err;
   console.log(buf.toString('hex'));
 });
+```
 This generates a random 16-byte string, often used for cryptographic purposes such as initialization vectors (IVs).
 
-Encryption and Decryption with AES-256-CBC
-javascript
-Copy code
+## **Encryption and Decryption with AES-256-CBC**
+``` Javascript
 const algorithm = 'aes-256-cbc';
 const key = crypto.randomBytes(32);
 const iv = crypto.randomBytes(16);
@@ -76,12 +79,6 @@ const decipher = crypto.createDecipheriv(algorithm, key, iv);
 let decrypted = decipher.update(encrypted, 'hex', 'utf8');
 decrypted += decipher.final('utf8');
 console.log(decrypted);
+```
 Encryption: The createCipheriv method uses the AES-256-CBC algorithm, a random 32-byte key, and a 16-byte IV to encrypt a message.
 Decryption: The createDecipheriv method decrypts the encrypted message using the same key and IV.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-javascript
-Copy code
-
-You can copy and paste this into a `README.md` file in your repository. Replace `your-username` with you
