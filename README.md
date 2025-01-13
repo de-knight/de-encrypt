@@ -82,3 +82,13 @@ console.log(decrypted);
 ```
 Encryption: The createCipheriv method uses the AES-256-CBC algorithm, a random 32-byte key, and a 16-byte IV to encrypt a message.
 Decryption: The createDecipheriv method decrypts the encrypted message using the same key and IV.
+
+
+**License**
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+```code
+Hamim Mahamud Hamy
+
+```
+
