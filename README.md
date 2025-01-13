@@ -87,8 +87,5 @@ Decryption: The createDecipheriv method decrypts the encrypted message using the
 **License**
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-```code
-Hamim Mahamud Hamy
-
-```
+![License](de-encrypt/blob/core/LICENSE)
 
